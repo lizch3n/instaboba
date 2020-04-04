@@ -6,7 +6,16 @@ const port = process.env.PORT || 3100;
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: [
+            '--no-sandbox',
+            '--proxy-server="direct://"',
+            '--proxy-bypass-list=*',
+            '--disable-dev-shm-usage',
+            '--single-process'
+        ]
+    });
     const page = await browser.newPage();
     await page.goto('https://news.ycombinator.com', {waitUntil: 'networkidle2'});
     await page.pdf({path: 'hn.pdf', format: 'A4'});
