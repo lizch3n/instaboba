@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "0.0.001",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "@google-cloud/storage": "4.3.1",
+    "axios": "^0.18.1",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.15.0",
+    "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-device": "^0.4.2",
+    "express-handlebars": "^4.0.0",
+    "ftp": "^0.3.10",
+    "gulp": "^4.0.2",
+    "gulp-change": "^1.0.2",
+    "lodash": "^4.17.15",
+    "minify": "^5.1.1",
+    "node-sass": "^4.13.1",
+    "pg": "4.x",
+    "puppeteer": "^2.1.1",
+    "request": "^2.88.2",
+    "require-dir": "^1.2.0",
+    "superagent": "^5.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "common": "gsutil -m -h 'Cache-Control:no-store' cp ./projects/demetrios-bridal/common.css gs://assets.mcomnyapps.net/demetrios-bridal/1.0.2/css/"
+  },
+  "author": "Elizabeth Chen",
+  "license": ""
+}
