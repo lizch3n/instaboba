@@ -37,7 +37,7 @@ const getPage = function(){
         });
         const page = await browser.newPage();
         await page.goto('http://www.instagram.com/bobafettcav/', {waitUntil: 'networkidle2'});
-        // await page.pdf({path: 'hn.pdf', format: 'A4'});
+        await page.pdf({path: 'hn.pdf', format: 'A4'});
         resolve({"content":await page.content(),"browser":browser});
         // await browser.close();
     })
@@ -49,7 +49,11 @@ app.get('/', function(req,res,next){
         res.send(obj.content);
     });
 });
-
+app.get('/pdf', function(req,res,next) {
+    try {
+    res.sendFile(__dirname+'/hn.pdf')
+    }catch(e){}
+})
 process.on('uncaughtException', function (err) {
     console.log(err);
 });
