@@ -28,7 +28,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "common": "gsutil -m -h 'Cache-Control:no-store' cp ./projects/demetrios-bridal/common.css gs://assets.mcomnyapps.net/demetrios-bridal/1.0.2/css/"
+    "common": ""
   },
   "author": "Elizabeth Chen",
   "license": ""
