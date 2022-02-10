@@ -19,7 +19,7 @@
     "gulp-change": "^1.0.2",
     "lodash": "^4.17.15",
     "minify": "^5.1.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pg": "4.x",
     "puppeteer": "^2.1.1",
     "request": "^2.88.2",
